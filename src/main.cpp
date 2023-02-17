@@ -77,18 +77,18 @@ void getColorScheme(uint8_t pixelValue, uint8_t *colorScheme)
     colorScheme[BLUE] = 0;
     break;
   case 1: // WHITE
-    colorScheme[RED] = 15;
-    colorScheme[GREEN] = 25;
-    colorScheme[BLUE] = 25;
+    colorScheme[RED] = 30;
+    colorScheme[GREEN] = 50;
+    colorScheme[BLUE] = 50;
     break;
   case 2: // RED
-    colorScheme[RED] = 25;
+    colorScheme[RED] = 50;
     colorScheme[GREEN] = 0;
     colorScheme[BLUE] = 0;
     break;
   case 3: // GREEN
     colorScheme[RED] = 0;
-    colorScheme[GREEN] = 25;
+    colorScheme[GREEN] = 50;
     colorScheme[BLUE] = 0;
     break;
   default:
