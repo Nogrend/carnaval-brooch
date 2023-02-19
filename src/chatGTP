@@ -1,0 +1,27 @@
+#include <Adafruit_NeoPixel.h>
+
+#define PIN 6
+#define NUMPIXELS 8
+
+class Eye {
+  private:
+    Adafruit_NeoPixel& pixels;
+    int x, y;
+
+  public:
+    Eye(Adafruit_NeoPixel& pixels, int x, int y) : pixels(pixels), x(x), y(y) {}
+    void draw() {
+      pixels.setPixelColor(x * 2 + y, pixels.Color(255, 255, 255));
+      pixels.show();
+    }
+};
+
+void setup() {
+  NeoPixelDriver neoPixels = NeoPixelDriver(NUMPIXELS, PIN);
+  Eye rightEye(neoPixels, 0, 0);
+  rightEye.draw();
+}
+
+void loop() {
+  // do nothing
+}
